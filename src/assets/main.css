@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-size: 1rem;
+  padding: 1.25rem;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: #e0e0e0;
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+h4, h5, h6 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #bdbdbd;
+  line-height: 1.8;
+}
+
+button {
+  display: inline-block;
+  background-color: #1dbf73;
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #17a564;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+.recipe-card {
+  width: 100%; /* Full width by default for responsiveness */
+  max-width: 20rem; /* Limit maximum width */
+  height: auto; /* Allow the height to adapt based on content */
+  background-color: #1e1e1e;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.recipe-card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.recipe-image {
+  width: 100%;
+  height: 12rem; /* Set a fixed height for the image */
+  object-fit: cover;
+}
+
+.recipe-info {
+  padding: 1rem; /* Add some padding for the text and button */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.recipe-info h2 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-info p {
+  font-size: 0.875rem;
+  color: #bdbdbd;
+  margin-bottom: 1rem;
+}
+
+.recipe-info button {
+  background-color: #1dbf73;
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recipe-info button:hover {
+  background-color: #17a564;
+}
+
+/* Responsive styling */
+@media (min-width: 640px) {
+  .recipe-card {
+    width: 100%; /* Full width on small screens */
+    max-width: 18rem; /* Slightly smaller max width for small screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .recipe-card {
+    width: calc(33.333% - 2rem); /* 3 cards per row on larger screens */
+    margin: 1rem;
+  }
+}
